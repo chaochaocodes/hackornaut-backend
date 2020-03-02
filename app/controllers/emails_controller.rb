@@ -6,6 +6,6 @@ class EmailsController < ApplicationController
     end
 
     def save 
-        
+
     end
 end
