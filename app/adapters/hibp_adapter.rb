@@ -1,7 +1,28 @@
 module HibpAdapter
-    class Hibp
+    class Client 
         HIBP_URL = 'https://haveibeenpwned.com/api/v3/'
         HIBP_KEY = ENV["HIBP_API_KEY"]
+
+        attr_reader :email 
+
+        def initialize(email)
+            @email = email 
+        end
+
+        def get_breaches 
+            req = Typhoeus.get(HIBP_URL)
+            res = JSON.parse(req.body)
+        end
+
+        def email_url
+            
+        end
+    end
+
+    class Breaches
+        HIBP_URL = 'https://haveibeenpwned.com/api/v3/'
+        HIBP_KEY = ENV["HIBP_API_KEY"]
+        BREACHES = 'breaches'
     
         def self.get_all_breaches
             req = Typhoeus.get(HIBP_URL + BREACHES)
