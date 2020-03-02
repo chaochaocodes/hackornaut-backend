@@ -1,0 +1,2 @@
+class EmailsBreachesController < ApplicationController
+end
