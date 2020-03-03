@@ -4,8 +4,4 @@ class EmailsController < ApplicationController
         email.search
         render json: email
     end
-
-    def save 
-
-    end
 end
