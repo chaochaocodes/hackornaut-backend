@@ -7,6 +7,7 @@ class Email < ApplicationRecord
         search_email = HibpAdapter::Client.new(self.address)
         email_breaches = search_email.get(:breaches)
         Breach.breach_name_to_obj(email_breaches).each do |breach|
+            puts "---#{breach}"
             self.breaches << breach
         end
     end
