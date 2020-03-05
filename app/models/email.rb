@@ -10,5 +10,6 @@ class Email < ApplicationRecord
             puts "---#{breach}"
             self.breaches << breach
         end
+        puts Breach.breach_name_to_obj(email_breaches)
     end
 end

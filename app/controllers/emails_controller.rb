@@ -4,4 +4,9 @@ class EmailsController < ApplicationController
         email.search
         render json: email
     end
+
+    def show
+        email = Email.find(params[:id])
+        render json: email
+    end
 end
