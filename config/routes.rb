@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :emails_breaches
+  get 'breaches/thirty', to: 'breaches#thirty'
   resources :breaches
   post 'emails/search', to: 'emails#search'
   resources :emails
