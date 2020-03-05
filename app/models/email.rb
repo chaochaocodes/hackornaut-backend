@@ -9,5 +9,6 @@ class Email < ApplicationRecord
         Breach.breach_name_to_obj(email_breaches).each do |breach|
             self.breaches << breach
         end
+        puts Breach.breach_name_to_obj(email_breaches)
     end
 end
